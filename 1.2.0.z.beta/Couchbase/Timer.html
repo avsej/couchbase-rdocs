@@ -1,0 +1,647 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Couchbase::Timer
+  
+    &mdash; Documentation by YARD 0.8.2.1
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (T)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Couchbase.html" title="Couchbase (module)">Couchbase</a></span></span>
+     &raquo; 
+    <span class="title">Timer</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Couchbase::Timer
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Couchbase::Timer</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">ext/couchbase_ext/couchbase_ext.c</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cancel-instance_method" title="#cancel (instance method)">- (String) <strong>cancel</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Cancel the timer.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Couchbase::Timer) <strong>initialize</strong> {|timer| ... }</a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Initialize new Timer.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#inspect-instance_method" title="#inspect (instance method)">- (String) <strong>inspect</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns a string containing a human-readable representation of the Timer.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Couchbase::Timer (class)">Couchbase::Timer</a></span></tt>) <strong>initialize</strong> {|timer| ... }
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Initialize new Timer
+</p>
+<p>
+The timers could used to trigger reccuring events or implement timeouts.
+The library will call given block after time interval pass.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>
+Create regular timer for 0.5 second
+</p>
+</div></p>
+      
+      <pre class="example code"><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span> <span class='kw'>do</span>
+  <span class='const'>Couchbase</span><span class='op'>::</span><span class='const'>Timer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_c'>c</span><span class='comma'>,</span> <span class='int'>500000</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ding-dong</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>
+Create periodic timer
+</p>
+</div></p>
+      
+      <pre class="example code"><span class='id identifier rubyid_n'>n</span> <span class='op'>=</span> <span class='int'>10</span>
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span> <span class='kw'>do</span>
+  <span class='const'>Couchbase</span><span class='op'>::</span><span class='const'>Timer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_c'>c</span><span class='comma'>,</span> <span class='int'>500000</span><span class='comma'>,</span> <span class='symbol'>:periodic</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_tm'>tm</span><span class='op'>|</span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_n'>n</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_n'>n</span> <span class='op'>-=</span> <span class='int'>1</span>
+    <span class='id identifier rubyid_tm'>tm</span><span class='period'>.</span><span class='id identifier rubyid_cancel'>cancel</span> <span class='kw'>if</span> <span class='id identifier rubyid_n'>n</span><span class='period'>.</span><span class='id identifier rubyid_zero?'>zero?</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>bucket</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Bucket.html" title="Couchbase::Bucket (class)">Bucket</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the connection object
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>interval</span>
+      
+      
+        <span class='type'>(<tt>Fixnum</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the interval in microseconds
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+  
+
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>timer</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Couchbase::Timer (class)">Timer</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the current timer
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>
+1.2.0
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/couchbase_ext/timer.c', line 162</span>
+
+VALUE
+cb_timer_init(int argc, VALUE *argv, VALUE self)
+{
+    struct timer_st *tm = DATA_PTR(self);
+    VALUE bucket, opts, timeout, exc, cb;
+    lcb_error_t err;
+
+    rb_need_block();
+    rb_scan_args(argc, argv, &quot;21&amp;&quot;, &amp;bucket, &amp;timeout, &amp;opts, &amp;cb);
+
+    if (CLASS_OF(bucket) != cBucket) {
+        rb_raise(rb_eTypeError, &quot;wrong argument type (expected Couchbase::Bucket)&quot;);
+    }
+    tm-&gt;self = self;
+    tm-&gt;callback = cb;
+    tm-&gt;usec = NUM2ULONG(timeout);
+    tm-&gt;bucket = DATA_PTR(bucket);
+    if (opts != Qnil) {
+        Check_Type(opts, T_HASH);
+        tm-&gt;periodic = RTEST(rb_hash_aref(opts, sym_periodic));
+    }
+    tm-&gt;timer = lcb_timer_create(tm-&gt;bucket-&gt;handle, tm, tm-&gt;usec,
+            tm-&gt;periodic, timer_callback, &amp;err);
+    exc = cb_check_error(err, &quot;failed to attach the timer&quot;, Qnil);
+    if (exc != Qnil) {
+        rb_exc_raise(exc);
+    }
+
+    return self;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="cancel-instance_method">
+  
+    - (<tt>String</tt>) <strong>cancel</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Cancel the timer.
+</p>
+<p>
+This operation makes sense for periodic timers or if one need to cancel
+regular timer before it will be triggered.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>
+Cancel periodic timer
+</p>
+</div></p>
+      
+      <pre class="example code"><span class='id identifier rubyid_n'>n</span> <span class='op'>=</span> <span class='int'>1</span>
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_tm'>tm</span> <span class='op'>=</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_create_periodic_timer'>create_periodic_timer</span><span class='lparen'>(</span><span class='int'>500000</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_incr'>incr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_n'>n</span> <span class='op'>==</span> <span class='int'>5</span>
+        <span class='id identifier rubyid_tm'>tm</span><span class='period'>.</span><span class='id identifier rubyid_cancel'>cancel</span>
+      <span class='kw'>else</span>
+        <span class='id identifier rubyid_n'>n</span> <span class='op'>+=</span> <span class='int'>1</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>
+1.2.0.dp6
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+97
+98
+99
+100
+101
+102
+103</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/couchbase_ext/timer.c', line 97</span>
+
+VALUE
+cb_timer_cancel(VALUE self)
+{
+    struct timer_st *tm = DATA_PTR(self);
+    lcb_timer_destroy(tm-&gt;bucket-&gt;handle, tm-&gt;timer);
+    return self;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="inspect-instance_method">
+  
+    - (<tt>String</tt>) <strong>inspect</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns a string containing a human-readable representation of the Timer.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>
+1.2.0.dp6
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/couchbase_ext/timer.c', line 55</span>
+
+VALUE
+cb_timer_inspect(VALUE self)
+{
+    VALUE str;
+    struct timer_st *tm = DATA_PTR(self);
+    char buf[200];
+
+    str = rb_str_buf_new2(&quot;#&lt;&quot;);
+    rb_str_buf_cat2(str, rb_obj_classname(self));
+    snprintf(buf, 20, &quot;:%p&quot;, (void *)self);
+    rb_str_buf_cat2(str, buf);
+    snprintf(buf, 100, &quot; timeout:%u periodic:%s&gt;&quot;,
+            tm-&gt;usec, tm-&gt;periodic ? &quot;true&quot; : &quot;false&quot;);
+    rb_str_buf_cat2(str, buf);
+
+    return str;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Tue Sep 18 17:48:25 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.2.1 (ruby-1.9.2).
+</div>
+
+  </body>
+</html>

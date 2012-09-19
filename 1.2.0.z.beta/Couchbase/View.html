@@ -1,0 +1,1407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Couchbase::View
+  
+    &mdash; Documentation by YARD 0.8.2.1
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (V)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Couchbase.html" title="Couchbase (module)">Couchbase</a></span></span>
+     &raquo; 
+    <span class="title">View</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Couchbase::View
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Couchbase::View</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2">Enumerable</dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/couchbase/view.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+This class implements Couchbase View execution
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="http://www.couchbase.com/docs/couchbase-manual-2.0/couchbase-views.html" target="_parent" title="http://www.couchbase.com/docs/couchbase-manual-2.0/couchbase-views.html">http://www.couchbase.com/docs/couchbase-manual-2.0/couchbase-views.html</a></li>
+    
+  </ul>
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#params-instance_method" title="#params (instance method)">- (Object) <strong>params</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute params.
+</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each-instance_method" title="#each (instance method)">- (Object) <strong>each</strong>(params = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Yields each document that was fetched by view.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#fetch-instance_method" title="#fetch (instance method)">- (Array) <strong>fetch</strong>(params = {}) {|document| ... }</a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Performs query to Couchbase view.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (View) <strong>initialize</strong>(bucket, endpoint, params = {}) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Set up view endpoint and optional params.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#inspect-instance_method" title="#inspect (instance method)">- (String) <strong>inspect</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns a string containing a human-readable representation of the <span class='object_link'><a href="" title="Couchbase::View (class)">View</a></span>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#on_error-instance_method" title="#on_error (instance method)">- (Object) <strong>on_error</strong> {|from, reason| ... }</a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Registers callback function for handling error objects in view results
+stream.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Couchbase::View (class)">View</a></span></tt>) <strong>initialize</strong>(bucket, endpoint, params = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Set up view endpoint and optional params
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>bucket</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Bucket.html" title="Couchbase::Bucket (class)">Couchbase::Bucket</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Connection object which stores all info about how to make requests to
+Couchbase views.
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>endpoint</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Full Couchbase View URI.
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>params</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Optional parameter which will be passed to <span class='object_link'><a href="#fetch-instance_method" title="Couchbase::View#fetch (method)">#fetch</a></span>
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+50
+51
+52
+53
+54
+55
+56
+57
+58</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/couchbase/view.rb', line 50</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_bucket'>bucket</span><span class='comma'>,</span> <span class='id identifier rubyid_endpoint'>endpoint</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='ivar'>@bucket</span> <span class='op'>=</span> <span class='id identifier rubyid_bucket'>bucket</span>
+  <span class='ivar'>@endpoint</span> <span class='op'>=</span> <span class='id identifier rubyid_endpoint'>endpoint</span>
+  <span class='ivar'>@params</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span>
+  <span class='ivar'>@wrapper_class</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='symbol'>:wrapper_class</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='const'>ViewRow</span>
+  <span class='kw'>unless</span> <span class='ivar'>@wrapper_class</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:wrap</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>wrapper class should reposond to :wrap, check the options</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="params-instance_method">
+  
+    - (<tt>Object</tt>) <strong>params</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute params
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+38
+39
+40</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/couchbase/view.rb', line 38</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_params'>params</span>
+  <span class='ivar'>@params</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="each-instance_method">
+  
+    - (<tt>Object</tt>) <strong>each</strong>(params = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Yields each document that was fetched by view. It doesn&#8217;t instantiate
+all the results because of streaming JSON parser. Returns Enumerator unless
+block given.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>
+Use each method with block
+</p>
+</div></p>
+      
+      <pre class="example code">
+<span class='id identifier rubyid_view'>view</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_doc'>doc</span><span class='op'>|</span>
+  <span class='comment'># do something with doc
+</span><span class='kw'>end</span></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>
+Use Enumerator version
+</p>
+</div></p>
+      
+      <pre class="example code">
+<span class='id identifier rubyid_enum'>enum</span> <span class='op'>=</span> <span class='id identifier rubyid_view'>view</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span>  <span class='comment'># request hasn't issued yet
+</span><span class='id identifier rubyid_enum'>enum</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_doc'>doc</span><span class='op'>|</span> <span class='id identifier rubyid_doc'>doc</span><span class='period'>.</span><span class='id identifier rubyid_title'>title</span><span class='period'>.</span><span class='id identifier rubyid_upcase'>upcase</span><span class='rbrace'>}</span></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>
+Pass options during view initialization
+</p>
+</div></p>
+      
+      <pre class="example code">
+<span class='id identifier rubyid_endpoint'>endpoint</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://localhost:5984/default/_design/blog/_view/recent</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_view'>view</span> <span class='op'>=</span> <span class='const'>View</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_conn'>conn</span><span class='comma'>,</span> <span class='id identifier rubyid_endpoint'>endpoint</span><span class='comma'>,</span> <span class='symbol'>:descending</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_view'>view</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_document'>document</span><span class='op'>|</span>
+  <span class='comment'># do something with document
+</span><span class='kw'>end</span></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>params</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Params for Couchdb query. Some useful are: :start_key, :start_key_doc_id,
+:descending. See <span class='object_link'><a href="#fetch-instance_method" title="Couchbase::View#fetch (method)">#fetch</a></span>.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+86
+87
+88
+89</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/couchbase/view.rb', line 86</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each'>each</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_enum_for'>enum_for</span><span class='lparen'>(</span><span class='symbol'>:each</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+  <span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_doc'>doc</span><span class='op'>|</span> <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_doc'>doc</span><span class='rparen'>)</span><span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="fetch-instance_method">
+  
+    - (<tt>Array</tt>) <strong>fetch</strong>(params = {}) {|document| ... }
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'><p>
+Avoid using <tt>$</tt> symbol as prefix for properties in your documents, because
+server marks with it meta fields like flags and expiration, therefore
+dollar prefix is some kind of reserved. It won&#8217;t hurt your
+application. Currently the <span class='object_link'><a href="ViewRow.html" title="Couchbase::ViewRow (class)">Couchbase::ViewRow</a></span> class extracts <tt>$flags</tt>, <tt>$cas</tt> and
+<tt>$expiration</tt> properties from the document and store them in <span class='object_link'><a href="ViewRow.html#meta-instance_method" title="Couchbase::ViewRow#meta (method)">Couchbase::ViewRow#meta</a></span>
+hash.
+</p>
+</div>
+  </div>
+
+<p>
+Performs query to Couchbase view. This method will stream results if block
+given or return complete result set otherwise. In latter case it defines
+method <tt>total_rows</tt> returning corresponding entry from Couchbase
+result object.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>
+Query <tt>recent_posts</tt> view with key filter
+</p>
+</div></p>
+      
+      <pre class="example code"><span class='id identifier rubyid_doc'>doc</span><span class='period'>.</span><span class='id identifier rubyid_recent_posts'>recent_posts</span><span class='lparen'>(</span><span class='symbol'>:body</span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='symbol'>:keys</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>key1</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>key2</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rbrace'>}</span><span class='rparen'>)</span></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>
+Fetch second page of result set (splitted in 10 items per page)
+</p>
+</div></p>
+      
+      <pre class="example code"><span class='id identifier rubyid_page'>page</span> <span class='op'>=</span> <span class='int'>2</span>
+<span class='id identifier rubyid_per_page'>per_page</span> <span class='op'>=</span> <span class='int'>10</span>
+<span class='id identifier rubyid_doc'>doc</span><span class='period'>.</span><span class='id identifier rubyid_recent_posts'>recent_posts</span><span class='lparen'>(</span><span class='symbol'>:skip</span> <span class='op'>=&gt;</span> <span class='lparen'>(</span><span class='id identifier rubyid_page'>page</span> <span class='op'>-</span> <span class='int'>1</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='id identifier rubyid_per_page'>per_page</span><span class='comma'>,</span> <span class='symbol'>:limit</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_per_page'>per_page</span><span class='rparen'>)</span></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>
+Simple join using Map/Reduce
+</p>
+</div></p>
+      
+      <pre class="example code"><span class='comment'># Given the bucket with Posts(:id, :type, :title, :body) and
+</span><span class='comment'># Comments(:id, :type, :post_id, :author, :body). The map function
+</span><span class='comment'># below (in javascript) will build the View index called
+</span><span class='comment'># &quot;recent_posts_with_comments&quot; which will behave like left inner join.
+</span><span class='comment'>#
+</span><span class='comment'>#   function(doc) {
+</span><span class='comment'>#     switch (doc.type) {
+</span><span class='comment'>#       case &quot;Post&quot;:
+</span><span class='comment'>#         emit([doc.id, 0], null);
+</span><span class='comment'>#         break;
+</span><span class='comment'>#       case &quot;Comment&quot;:
+</span><span class='comment'>#         emit([doc.post_id, 1], null);
+</span><span class='comment'>#         break;
+</span><span class='comment'>#     }
+</span><span class='comment'>#   }
+</span><span class='comment'>#
+</span><span class='id identifier rubyid_post_id'>post_id</span> <span class='op'>=</span> <span class='int'>42</span>
+<span class='id identifier rubyid_doc'>doc</span><span class='period'>.</span><span class='id identifier rubyid_recent_posts_with_comments'>recent_posts_with_comments</span><span class='lparen'>(</span><span class='symbol'>:start_key</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='id identifier rubyid_post_id'>post_id</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span>
+                               <span class='symbol'>:end_key</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='id identifier rubyid_post_id'>post_id</span><span class='comma'>,</span> <span class='int'>1</span><span class='rbracket'>]</span><span class='comma'>,</span>
+                               <span class='symbol'>:include_docs</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>params</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+parameters for Couchbase query.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>params</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:include_docs</span>
+          <span class="type">(<tt>true</tt>, <tt>false</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>false</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>
+Include the full content of the documents in the return.
+</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:descending</span>
+          <span class="type">(<tt>true</tt>, <tt>false</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>false</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>
+Return the documents in descending by key order
+</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:key</span>
+          <span class="type">(<tt>String</tt>, <tt>Fixnum</tt>, <tt>Hash</tt>, <tt>Array</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>
+Return only documents that match the specified key. Will be JSON encoded.
+</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:keys</span>
+          <span class="type">(<tt>Array</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>
+The same as <tt>:key</tt>, but will work for set of keys. Will be JSON
+encoded.
+</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:startkey</span>
+          <span class="type">(<tt>String</tt>, <tt>Fixnum</tt>, <tt>Hash</tt>, <tt>Array</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>
+Return records starting with the specified key. <tt>:start_key</tt> option
+should also work here. Will be JSON encoded.
+</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:startkey_docid</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>
+Document id to start with (to allow pagination for duplicate startkeys).
+<tt>:start_key_doc_id</tt> also should work.
+</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:endkey</span>
+          <span class="type">(<tt>String</tt>, <tt>Fixnum</tt>, <tt>Hash</tt>, <tt>Array</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>
+Stop returning records when the specified key is reached. <tt>:end_key</tt>
+option should also work here. Will be JSON encoded.
+</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:endkey_docid</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>
+Last document id to include in the output (to allow pagination for
+duplicate startkeys). <tt>:end_key_doc_id</tt> also should work.
+</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:inclusive_end</span>
+          <span class="type">(<tt>true</tt>, <tt>false</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>true</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>
+Specifies whether the specified end key should be included in the result
+</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:limit</span>
+          <span class="type">(<tt>Fixnum</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>
+Limit the number of documents in the output.
+</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:skip</span>
+          <span class="type">(<tt>Fixnum</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>
+Skip this number of records before starting to return the results.
+</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:on_error</span>
+          <span class="type">(<tt>String</tt>, <tt>Symbol</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>:continue</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>
+Sets the response in the event of an error. Supported values:
+</p>
+<table>
+<tr><td valign="top">:continue</td><td><p>
+Continue to generate view information in the event of an error, including
+the error information in the view response stream.
+</p>
+</td></tr>
+<tr><td valign="top">:stop</td><td><p>
+Stop immediately when an error condition occurs. No further view
+information will be returned.
+</p>
+</td></tr>
+</table>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:connection_timeout</span>
+          <span class="type">(<tt>Fixnum</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>60000</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>
+Timeout before the view request is dropped (milliseconds)
+</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:reduce</span>
+          <span class="type">(<tt>true</tt>, <tt>false</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>true</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>
+Use the reduction function
+</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:group</span>
+          <span class="type">(<tt>true</tt>, <tt>false</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>false</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>
+Group the results using the reduce function to a group or single row.
+</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:group_level</span>
+          <span class="type">(<tt>Fixnum</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>
+Specify the group level to be used.
+</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:stale</span>
+          <span class="type">(<tt>String</tt>, <tt>Symbol</tt>, <tt>false</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>:update_after</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>
+Allow the results from a stale view to be used. Supported values:
+</p>
+<table>
+<tr><td valign="top">false</td><td><p>
+Force a view update before returning data
+</p>
+</td></tr>
+<tr><td valign="top">:ok</td><td><p>
+Allow stale views
+</p>
+</td></tr>
+<tr><td valign="top">:update_after</td><td><p>
+Allow stale view, update view after it has been accessed
+</p>
+</td></tr>
+</table>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:body</span>
+          <span class="type">(<tt>Hash</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>
+Accepts the same parameters, except <tt>:body</tt> of course, but sends
+them in POST body instead of query string. It could be useful for really
+large and complex parameters.
+</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>document</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="ViewRow.html" title="Couchbase::ViewRow (class)">Couchbase::ViewRow</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+with documents. There will be <tt>total_entries</tt> method defined on this
+array if it&#8217;s possible.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Error/View.html" title="Couchbase::Error::View (class)">Couchbase::Error::View</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+when <tt>on_error</tt> callback is nil and error object found in the result
+stream.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/couchbase/view.rb', line 232</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='ivar'>@params</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:chunked</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='symbol'>:extended</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='symbol'>:type</span> <span class='op'>=&gt;</span> <span class='symbol'>:view</span><span class='rbrace'>}</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_body'>body</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='symbol'>:body</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_body'>body</span> <span class='op'>=</span> <span class='const'>MultiJson</span><span class='period'>.</span><span class='id identifier rubyid_dump'>dump</span><span class='lparen'>(</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_body'>body</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='symbol'>:body</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_body'>body</span><span class='comma'>,</span> <span class='symbol'>:method</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='symbol'>:method</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='symbol'>:post</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='const'>Utils</span><span class='period'>.</span><span class='id identifier rubyid_build_query'>build_query</span><span class='lparen'>(</span><span class='ivar'>@endpoint</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_request'>request</span> <span class='op'>=</span> <span class='ivar'>@bucket</span><span class='period'>.</span><span class='id identifier rubyid_make_http_request'>make_http_request</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_request'>request</span><span class='period'>.</span><span class='id identifier rubyid_on_body'>on_body</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_chunk'>chunk</span><span class='op'>|</span>
+    <span class='id identifier rubyid_res'>res</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_chunk'>chunk</span>
+    <span class='id identifier rubyid_request'>request</span><span class='period'>.</span><span class='id identifier rubyid_pause'>pause</span> <span class='kw'>if</span> <span class='id identifier rubyid_chunk'>chunk</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>||</span> <span class='id identifier rubyid_chunk'>chunk</span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_filter'>filter</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/rows/</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/errors/</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_filter'>filter</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/total_rows</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+  <span class='id identifier rubyid_parser'>parser</span> <span class='op'>=</span> <span class='const'>YAJI</span><span class='op'>::</span><span class='const'>Parser</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='symbol'>:filter</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_filter'>filter</span><span class='comma'>,</span> <span class='symbol'>:with_path</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_docs'>docs</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_parser'>parser</span><span class='period'>.</span><span class='id identifier rubyid_on_object'>on_object</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_obj'>obj</span><span class='op'>|</span>
+    <span class='kw'>case</span> <span class='id identifier rubyid_path'>path</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/total_rows</span><span class='tstring_end'>&quot;</span></span>
+      <span class='comment'># if total_rows key present, save it and take next object
+</span>      <span class='id identifier rubyid_docs'>docs</span><span class='period'>.</span><span class='id identifier rubyid_instance_eval'>instance_eval</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>def total_rows; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_obj'>obj</span><span class='rbrace'>}</span><span class='tstring_content'>; end</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/errors/</span><span class='tstring_end'>&quot;</span></span>
+      <span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_reason'>reason</span> <span class='op'>=</span> <span class='id identifier rubyid_obj'>obj</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>from</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_obj'>obj</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>reason</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+      <span class='kw'>if</span> <span class='ivar'>@on_error</span>
+        <span class='ivar'>@on_error</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span>
+      <span class='kw'>else</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>Error</span><span class='op'>::</span><span class='const'>View</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>else</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
+        <span class='kw'>yield</span> <span class='ivar'>@wrapper_class</span><span class='period'>.</span><span class='id identifier rubyid_wrap'>wrap</span><span class='lparen'>(</span><span class='ivar'>@bucket</span><span class='comma'>,</span> <span class='id identifier rubyid_obj'>obj</span><span class='rparen'>)</span>
+      <span class='kw'>else</span>
+        <span class='id identifier rubyid_docs'>docs</span> <span class='op'>&lt;&lt;</span> <span class='ivar'>@wrapper_class</span><span class='period'>.</span><span class='id identifier rubyid_wrap'>wrap</span><span class='lparen'>(</span><span class='ivar'>@bucket</span><span class='comma'>,</span> <span class='id identifier rubyid_obj'>obj</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='comment'># run event loop until the terminating chunk will be found
+</span>  <span class='comment'># last_res variable keeps latest known chunk of the result
+</span>  <span class='id identifier rubyid_last_res'>last_res</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='id identifier rubyid_loop'>loop</span> <span class='kw'>do</span>
+    <span class='comment'># feed response received chunks to the parser
+</span>    <span class='kw'>while</span> <span class='id identifier rubyid_r'>r</span> <span class='op'>=</span> <span class='id identifier rubyid_res'>res</span><span class='period'>.</span><span class='id identifier rubyid_shift'>shift</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span>
+        <span class='kw'>if</span> <span class='ivar'>@on_error</span>
+          <span class='ivar'>@on_error</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http_error</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span><span class='rparen'>)</span>
+          <span class='kw'>break</span>
+        <span class='kw'>else</span>
+          <span class='id identifier rubyid_raise'>raise</span> <span class='const'>Error</span><span class='op'>::</span><span class='const'>View</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http_error</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+      <span class='kw'>end</span>
+      <span class='id identifier rubyid_last_res'>last_res</span> <span class='op'>=</span> <span class='id identifier rubyid_r'>r</span>
+      <span class='id identifier rubyid_parser'>parser</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_last_res'>last_res</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>||</span> <span class='op'>!</span><span class='id identifier rubyid_last_res'>last_res</span><span class='period'>.</span><span class='id identifier rubyid_completed?'>completed?</span>  <span class='comment'># shall we run the event loop?
+</span>      <span class='id identifier rubyid_request'>request</span><span class='period'>.</span><span class='id identifier rubyid_continue'>continue</span>
+    <span class='kw'>else</span>
+      <span class='kw'>break</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='comment'># return nil for call with block
+</span>  <span class='id identifier rubyid_block_given?'>block_given?</span> <span class='op'>?</span> <span class='kw'>nil</span> <span class='op'>:</span> <span class='id identifier rubyid_docs'>docs</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="inspect-instance_method">
+  
+    - (<tt>String</tt>) <strong>inspect</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns a string containing a human-readable representation of the <span class='object_link'><a href="" title="Couchbase::View (class)">Couchbase::View</a></span>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+301
+302
+303</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/couchbase/view.rb', line 301</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
+  <span class='tstring'><span class='tstring_beg'>%(</span><span class='tstring_content'>#&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbrace'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span><span class='rbrace'>}</span><span class='tstring_content'> @endpoint=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@endpoint</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='rbrace'>}</span><span class='tstring_content'> @params=</span><span class='embexpr_beg'>#{</span><span class='ivar'>@params</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='rbrace'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>)</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="on_error-instance_method">
+  
+    - (<tt>Object</tt>) <strong>on_error</strong> {|from, reason| ... }
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Registers callback function for handling error objects in view results
+stream.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'><p>
+Using <tt>#on_error</tt> to log all errors in view result
+</p>
+</div></p>
+      
+      <pre class="example code">
+<span class='comment'># JSON-encoded view result
+</span><span class='comment'>#
+</span><span class='comment'># {
+</span><span class='comment'>#   &quot;total_rows&quot;: 0,
+</span><span class='comment'>#   &quot;rows&quot;: [ ],
+</span><span class='comment'>#   &quot;errors&quot;: [
+</span><span class='comment'>#     {
+</span><span class='comment'>#       &quot;from&quot;: &quot;127.0.0.1:5984&quot;,
+</span><span class='comment'>#       &quot;reason&quot;: &quot;Design document `_design/testfoobar` missing in database `test_db_b`.&quot;
+</span><span class='comment'>#     },
+</span><span class='comment'>#     {
+</span><span class='comment'>#       &quot;from&quot;: &quot;http:// localhost:5984/_view_merge/&quot;,
+</span><span class='comment'>#       &quot;reason&quot;: &quot;Design document `_design/testfoobar` missing in database `test_db_c`.&quot;
+</span><span class='comment'>#     }
+</span><span class='comment'>#   ]
+</span><span class='comment'># }
+</span>
+<span class='id identifier rubyid_view'>view</span><span class='period'>.</span><span class='id identifier rubyid_on_error'>on_error</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_reason'>reason</span><span class='op'>|</span>
+  <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_view'>view</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='rbrace'>}</span><span class='tstring_content'> received the error '</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_reason'>reason</span><span class='rbrace'>}</span><span class='tstring_content'>' from </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_from'>from</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span>
+<span class='id identifier rubyid_docs'>docs</span> <span class='op'>=</span> <span class='id identifier rubyid_view'>view</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span></pre>
+    
+      
+        <p class="example_title"><div class='inline'><p>
+More concise example to just count errors
+</p>
+</div></p>
+      
+      <pre class="example code">
+<span class='id identifier rubyid_errcount'>errcount</span> <span class='op'>=</span> <span class='int'>0</span>
+<span class='id identifier rubyid_view'>view</span><span class='period'>.</span><span class='id identifier rubyid_on_error'>on_error</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_f'>f</span><span class='comma'>,</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span> <span class='id identifier rubyid_errcount'>errcount</span> <span class='op'>+=</span> <span class='int'>1</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span></pre>
+    
+  </div>
+
+<p class="tag_title">Yield Parameters:</p>
+<ul class="yieldparam">
+  
+    <li>
+      
+        <span class='name'>from</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Location of the node where error occured
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>reason</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The reason message describing what happened.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+127
+128
+129
+130</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/couchbase/view.rb', line 127</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_on_error'>on_error</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_callback'>callback</span><span class='rparen'>)</span>
+  <span class='ivar'>@on_error</span> <span class='op'>=</span> <span class='id identifier rubyid_callback'>callback</span>
+  <span class='kw'>self</span>  <span class='comment'># enable call chains
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Tue Sep 18 17:48:22 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.2.1 (ruby-1.9.2).
+</div>
+
+  </body>
+</html>

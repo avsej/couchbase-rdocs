@@ -1,0 +1,628 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.8.2.1
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><h1>Couchbase Ruby Client <a href="http://travis-ci.org/couchbase/couchbase-ruby-client"><img src="https://secure.travis-ci.org/couchbase/couchbase-ruby-client.png?branch=master" alt="Build Status" /></a></h1>
+
+<p>This is the official client library for use with Couchbase Server.</p>
+
+<h2>SUPPORT</h2>
+
+<p>If you found an issue, please file it in our <a href="http://couchbase.com/issues/browse/RCBC">JIRA</a>. Also you are
+always welcome on <code>#libcouchbase</code> channel at <a href="http://freenode.net/irc_servers.shtml">freenode.net IRC servers</a>.</p>
+
+<p>Documentation: <a href="http://rdoc.info/gems/couchbase">http://rdoc.info/gems/couchbase</a></p>
+
+<h2>INSTALL</h2>
+
+<p>This gem depends <a href="http://www.couchbase.com/develop/c/current">libcouchbase</a>. In most cases installing
+libcouchbase doesn't take much effort.</p>
+
+<h3>MacOS (Homebrew)</h3>
+
+<pre class="code ruby"><code>$ brew install libcouchbase
+</code></pre>
+
+<p>The official homebrew repository contains only stable versions of
+libvbucket and libcouchbase, if you need preview, take a look at
+Couchbase's fork: <a href="https://github.com/couchbase/homebrew">https://github.com/couchbase/homebrew</a></p>
+
+<pre class="code ruby"><code>$ brew install https://raw.github.com/couchbase/homebrew/preview/Library/Formula/libcouchbase.rb
+</code></pre>
+
+<h3>Debian (Ubuntu)</h3>
+
+<p>Add the appropriate line to <code>/etc/apt/sources.list.d/couchbase.list</code> for
+your OS release:</p>
+
+<pre class="code ruby"><code># Ubuntu 11.10 Oneiric Ocelot (Debian unstable)
+deb http://packages.couchbase.com/ubuntu oneiric oneiric/main
+
+# Ubuntu 10.04 Lucid Lynx (Debian stable or testing)
+deb http://packages.couchbase.com/ubuntu lucid lucid/main
+</code></pre>
+
+<p>Import Couchbase PGP key:</p>
+
+<pre class="code ruby"><code>wget -O- http://packages.couchbase.com/ubuntu/couchbase.key | sudo apt-key add -
+</code></pre>
+
+<p>Then install them</p>
+
+<pre class="code ruby"><code>$ sudo apt-get update &amp;&amp; sudo apt-get install libcouchbase-dev
+</code></pre>
+
+<p>Again, if you need preview versions, just use another repositories in
+your <code>couchbase.list</code></p>
+
+<pre class="code ruby"><code># Ubuntu 11.10 Oneiric Ocelot (Debian unstable)
+deb http://packages.couchbase.com/preview/ubuntu oneiric oneiric/main
+
+# Ubuntu 10.04 Lucid Lynx (Debian stable or testing)
+deb http://packages.couchbase.com/preview/ubuntu lucid lucid/main
+</code></pre>
+
+<h3>Centos (Redhat and rpm-based systems)</h3>
+
+<p>Add these lines to /etc/yum.repos.d/couchbase.repo using the correct architecture</p>
+
+<pre class="code ruby"><code>[couchbase]
+name = Couchbase package repository
+baseurl = http://packages.couchbase.com/rpm/5.5/i386
+
+[couchbase]
+name = Couchbase package repository
+baseurl = http://packages.couchbase.com/rpm/5.5/x86_64
+</code></pre>
+
+<p>Then to install libcouchbase itself, run:</p>
+
+<pre class="code ruby"><code>$ sudo yum update &amp;&amp; sudo yum install libcouchbase-devel
+</code></pre>
+
+<p>We have preview repositories for RPMs too, use them if you need to try
+fresh version of couchbase gem:</p>
+
+<pre class="code ruby"><code>[couchbase]
+name = Couchbase package repository
+baseurl = http://packages.couchbase.com/preview/rpm/5.5/i386
+
+[couchbase]
+name = Couchbase package repository
+baseurl = http://packages.couchbase.com/preview/rpm/5.5/x86_64
+</code></pre>
+
+<h3>Windows</h3>
+
+<p>There no additional dependencies for Windows systems. The gem carry
+prebuilt binary for it.</p>
+
+<h3>Couchbase gem</h3>
+
+<p>Now install the couchbase gem itself</p>
+
+<pre class="code ruby"><code>$ gem install couchbase
+</code></pre>
+
+<h2>USAGE</h2>
+
+<p>First of all you need to load library:</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>couchbase</span><span class='tstring_end'>'</span></span>
+</code></pre>
+
+<p>There are several ways to establish new connection to Couchbase Server.
+By default it uses the <code>http://localhost:8091/pools/default/buckets/default</code>
+as the endpoint. The client will automatically adjust configuration when
+the cluster will rebalance its nodes when nodes are added or deleted
+therefore this client is "smart".</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_c'>c</span> <span class='op'>=</span> <span class='const'>Couchbase</span><span class='period'>.</span><span class='id identifier rubyid_connect'>connect</span>
+</code></pre>
+
+<p>This is equivalent to following forms:</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_c'>c</span> <span class='op'>=</span> <span class='const'>Couchbase</span><span class='period'>.</span><span class='id identifier rubyid_connect'>connect</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://localhost:8091/pools/default/buckets/default</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_c'>c</span> <span class='op'>=</span> <span class='const'>Couchbase</span><span class='period'>.</span><span class='id identifier rubyid_connect'>connect</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://localhost:8091/pools/default</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_c'>c</span> <span class='op'>=</span> <span class='const'>Couchbase</span><span class='period'>.</span><span class='id identifier rubyid_connect'>connect</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://localhost:8091</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_c'>c</span> <span class='op'>=</span> <span class='const'>Couchbase</span><span class='period'>.</span><span class='id identifier rubyid_connect'>connect</span><span class='lparen'>(</span><span class='symbol'>:hostname</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>localhost</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_c'>c</span> <span class='op'>=</span> <span class='const'>Couchbase</span><span class='period'>.</span><span class='id identifier rubyid_connect'>connect</span><span class='lparen'>(</span><span class='symbol'>:hostname</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>localhost</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:port</span> <span class='op'>=&gt;</span> <span class='int'>8091</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_c'>c</span> <span class='op'>=</span> <span class='const'>Couchbase</span><span class='period'>.</span><span class='id identifier rubyid_connect'>connect</span><span class='lparen'>(</span><span class='symbol'>:pool</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>default</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:bucket</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>default</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+</code></pre>
+
+<p>The hash parameters take precedence on string URL.</p>
+
+<p>If you worry about state of your nodes or not sure what node is alive,
+you can pass the list of nodes and the library will iterate over it
+until finds the working one. From that moment it won't use <strong>your</strong>
+list, because node list from cluster config is more actual.</p>
+
+<pre class="code ruby"><code>c = Couchbase.connect(:bucket =&gt; &quot;mybucket&quot;,
+                      :node_list =&gt; ['example.com:8091', example.net'])
+</code></pre>
+
+<p>There is also handy method <code>Couchbase.bucket</code> which uses thread local
+storage to keep the reference to default connection. You can set the
+connection options via <code>Couchbase.connection_options</code>:</p>
+
+<pre class="code ruby"><code><span class='const'>Couchbase</span><span class='period'>.</span><span class='id identifier rubyid_connection_options'>connection_options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:bucket</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>blog</span><span class='tstring_end'>'</span></span><span class='rbrace'>}</span>
+<span class='const'>Couchbase</span><span class='period'>.</span><span class='id identifier rubyid_bucket'>bucket</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>                   <span class='comment'>#=&gt; &quot;blog&quot;
+</span><span class='const'>Couchbase</span><span class='period'>.</span><span class='id identifier rubyid_bucket'>bucket</span><span class='period'>.</span><span class='id identifier rubyid_set'>set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bar</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>      <span class='comment'>#=&gt; 3289400178357895424
+</span></code></pre>
+
+<p>The library supports both synchronous and asynchronous mode. In
+asynchronous mode all operations will return control to caller
+without blocking current thread. You can pass the block to method and it
+will be called with result when the operation will be completed. You
+need to run event loop when you scheduled your operations:</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_c'>c</span> <span class='op'>=</span> <span class='const'>Couchbase</span><span class='period'>.</span><span class='id identifier rubyid_connect'>connect</span>
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_conn'>conn</span><span class='op'>|</span>
+  <span class='id identifier rubyid_conn'>conn</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_ret'>ret</span><span class='op'>|</span> <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_conn'>conn</span><span class='period'>.</span><span class='id identifier rubyid_set'>set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bar</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>baz</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span>
+</code></pre>
+
+<p>The handlers could be nested</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_conn'>conn</span><span class='op'>|</span>
+  <span class='id identifier rubyid_conn'>conn</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ret'>ret</span><span class='op'>|</span>
+    <span class='id identifier rubyid_conn'>conn</span><span class='period'>.</span><span class='id identifier rubyid_incr'>incr</span><span class='lparen'>(</span><span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='symbol'>:initial</span> <span class='op'>=&gt;</span> <span class='int'>0</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+</code></pre>
+
+<p>The asynchronous callback receives instance of <code>Couchbase::Result</code> which
+responds to several methods to figure out what was happened:</p>
+
+<ul>
+<li><p><code>success?</code>. Returns <code>true</code> if operation succed.</p></li>
+<li><p><code>error</code>. Returns <code>nil</code> or exception object (subclass of
+<code>Couchbase::Error::Base</code>) if something went wrong.</p></li>
+<li><p><code>key</code></p></li>
+<li><p><code>value</code></p></li>
+<li><p><code>flags</code></p></li>
+<li><p><code>cas</code>. The CAS version tag.</p></li>
+<li><p><code>node</code>. Node address. It is used in flush and stats commands.</p></li>
+<li><p><code>operation</code>. The symbol, representing an operation.</p></li>
+</ul>
+
+
+<p>To handle global errors in async mode <code>#on_error</code> callback should be
+used. It can be set in following fashions:</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_on_error'>on_error</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_opcode'>opcode</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_exc'>exc</span><span class='op'>|</span>
+  <span class='comment'># ...
+</span><span class='kw'>end</span>
+
+<span class='id identifier rubyid_handler'>handler</span> <span class='op'>=</span> <span class='id identifier rubyid_lambda'>lambda</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_opcode'>opcode</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_exc'>exc</span><span class='op'>|</span> <span class='rbrace'>}</span>
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_on_error'>on_error</span> <span class='op'>=</span> <span class='id identifier rubyid_handler'>handler</span>
+</code></pre>
+
+<p>By default connection uses <code>:quiet</code> mode. This mean it won't raise
+exceptions when the given key is not exists:</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>missing-key</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>            <span class='comment'>#=&gt; nil
+</span></code></pre>
+
+<p>It could be useful when you are trying to make you code a bit efficient
+by avoiding exception handling. (See <code>#add</code> and <code>#replace</code> operations).
+You can turn on these exception by passing <code>:quiet =&gt; false</code> when you
+are instantiating the connection or change corresponding attribute:</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_quiet'>quiet</span> <span class='op'>=</span> <span class='kw'>false</span>
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>missing-key</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>                    <span class='comment'>#=&gt; raise Couchbase::Error::NotFound
+</span><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>missing-key</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:quiet</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>    <span class='comment'>#=&gt; nil
+</span></code></pre>
+
+<p>The library supports three different formats for representing values:</p>
+
+<ul>
+<li><p><code>:document</code> (default) format supports most of ruby types which could
+be mapped to JSON data (hashes, arrays, string, numbers). A future
+version will be able to run map/reduce queries on the values in the
+document form (hashes)</p></li>
+<li><p><code>:plain</code> This format avoids any conversions to be applied to your
+data, but your data should be passed as String. This is useful for
+building custom algorithms or formats. For example to implement a set:
+<a href="http://dustin.github.com/2011/02/17/memcached-set.html">http://dustin.github.com/2011/02/17/memcached-set.html</a></p></li>
+<li><p><code>:marshal</code> Use this format if you'd like to transparently serialize your
+ruby object with standard <code>Marshal.dump</code> and <code>Marshal.load</code> methods</p></li>
+</ul>
+
+
+<p>The couchbase API is the superset of <a href="http://code.google.com/p/memcached/wiki/BinaryProtocolRevamped">Memcached binary protocol</a>, so
+you can use its operations.</p>
+
+<h3>Get</h3>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_val'>val</span> <span class='op'>=</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_val'>val</span><span class='comma'>,</span> <span class='id identifier rubyid_flags'>flags</span><span class='comma'>,</span> <span class='id identifier rubyid_cas'>cas</span> <span class='op'>=</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:extended</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
+</code></pre>
+
+<p>Get and touch</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_val'>val</span> <span class='op'>=</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:ttl</span> <span class='op'>=&gt;</span> <span class='int'>10</span><span class='rparen'>)</span>
+</code></pre>
+
+<p>Get multiple values. In quiet mode will put <code>nil</code> values on missing
+positions:</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_vals'>vals</span> <span class='op'>=</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bar</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>baz</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_val_foo'>val_foo</span><span class='comma'>,</span> <span class='id identifier rubyid_val_bar'>val_bar</span><span class='comma'>,</span> <span class='id identifier rubyid_val_baz'>val_baz</span> <span class='op'>=</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bar</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>baz</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ret'>ret</span><span class='op'>|</span>
+    <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_success?'>success?</span>
+    <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_error'>error</span>
+    <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span>
+    <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span>
+    <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_flags'>flags</span>
+    <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_cas'>cas</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+</code></pre>
+
+<p>Get multiple values with extended information. The result will
+represented by hash with tuples <code>[value, flags, cas]</code> as a value.</p>
+
+<pre class="code ruby"><code>vals = c.get(&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;, :extended =&gt; true)
+vals.inspect    #=&gt; {&quot;baz&quot;=&gt;[&quot;3&quot;, 0, 4784582192793125888],
+                     &quot;foo&quot;=&gt;[&quot;1&quot;, 0, 8835713818674332672],
+                     &quot;bar&quot;=&gt;[&quot;2&quot;, 0, 10805929834096100352]}
+</code></pre>
+
+<p>Hash-like syntax</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_c'>c</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_c'>c</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bar</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>baz</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_c'>c</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='symbol'>:extended</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rbrace'>}</span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_c'>c</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:extended</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rbracket'>]</span>         <span class='comment'># for ruby 1.9.x only
+</span></code></pre>
+
+<h3>Touch</h3>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_touch'>touch</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>                      <span class='comment'># use :default_ttl
+</span><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_touch'>touch</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='int'>10</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_touch'>touch</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:ttl</span> <span class='op'>=&gt;</span> <span class='int'>10</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_touch'>touch</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='int'>10</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bar</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='int'>20</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_touch'>touch</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='int'>10</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bar</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='int'>20</span><span class='rparen'>)</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_success'>success</span><span class='op'>|</span>  <span class='rbrace'>}</span>
+</code></pre>
+
+<h3>Set</h3>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_set'>set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bar</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_set'>set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bar</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:flags</span> <span class='op'>=&gt;</span> <span class='int'>0x1000</span><span class='comma'>,</span> <span class='symbol'>:ttl</span> <span class='op'>=&gt;</span> <span class='int'>30</span><span class='comma'>,</span> <span class='symbol'>:format</span> <span class='op'>=&gt;</span> <span class='symbol'>:plain</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_c'>c</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bar</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_c'>c</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='symbol'>:flags</span> <span class='op'>=&gt;</span> <span class='int'>0x1000</span><span class='comma'>,</span> <span class='symbol'>:format</span> <span class='op'>=&gt;</span> <span class='symbol'>:plain</span><span class='rbrace'>}</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bar</span><span class='tstring_end'>&quot;</span></span>
+<span class='id identifier rubyid_c'>c</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:flags</span> <span class='op'>=&gt;</span> <span class='int'>0x1000</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bar</span><span class='tstring_end'>&quot;</span></span>          <span class='comment'># for ruby 1.9.x only
+</span><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_set'>set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bar</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:cas</span> <span class='op'>=&gt;</span> <span class='int'>8835713818674332672</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_set'>set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bar</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_cas'>cas</span><span class='comma'>,</span> <span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_operation'>operation</span><span class='op'>|</span>  <span class='rbrace'>}</span>
+</code></pre>
+
+<h3>Add</h3>
+
+<p>Add command will fail if the key already exists. It accepts the same
+options as set command above.</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bar</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bar</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:flags</span> <span class='op'>=&gt;</span> <span class='int'>0x1000</span><span class='comma'>,</span> <span class='symbol'>:ttl</span> <span class='op'>=&gt;</span> <span class='int'>30</span><span class='comma'>,</span> <span class='symbol'>:format</span> <span class='op'>=&gt;</span> <span class='symbol'>:plain</span><span class='rparen'>)</span>
+</code></pre>
+
+<h3>Replace</h3>
+
+<p>The replace command will fail if the key already exists. It accepts the same
+options as set command above.</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_replace'>replace</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bar</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+</code></pre>
+
+<h3>Prepend/Append</h3>
+
+<p>These commands are meaningful when you are using the <code>:plain</code> value format,
+because the concatenation is performed by server which has no idea how
+to merge to JSON values or values in ruby Marshal format. You may receive
+an <code>Couchbase::Error::ValueFormat</code> error.</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_set'>set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>world</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_append'>append</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_prepend'>prepend</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hello, </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>                    <span class='comment'>#=&gt; &quot;Hello, world!&quot;
+</span></code></pre>
+
+<h3>Increment/Decrement</h3>
+
+<p>These commands increment the value assigned to the key. It will raise
+Couchbase::Error::DeltaBadval if the delta or value is not a number.</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_set'>set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_incr'>incr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>                   <span class='comment'>#=&gt; 2
+</span><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_incr'>incr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:delta</span> <span class='op'>=&gt;</span> <span class='int'>2</span><span class='rparen'>)</span>      <span class='comment'>#=&gt; 4
+</span><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_incr'>incr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='int'>4</span><span class='rparen'>)</span>                <span class='comment'>#=&gt; 8
+</span><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_incr'>incr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='op'>-</span><span class='int'>1</span><span class='rparen'>)</span>               <span class='comment'>#=&gt; 7
+</span><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_incr'>incr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='op'>-</span><span class='int'>100</span><span class='rparen'>)</span>             <span class='comment'>#=&gt; 0
+</span><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_incr'>incr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ret'>ret</span><span class='op'>|</span>
+    <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_success?'>success?</span>
+    <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span>
+    <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_cas'>cas</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_set'>set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='int'>10</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_decr'>decr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span>                <span class='comment'>#=&gt; 9
+</span><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_decr'>decr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='int'>100</span><span class='rparen'>)</span>              <span class='comment'>#=&gt; 0
+</span><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_decr'>decr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ret'>ret</span><span class='op'>|</span>
+    <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_success?'>success?</span>
+    <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span>
+    <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_cas'>cas</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_incr'>incr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>missing1</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:initial</span> <span class='op'>=&gt;</span> <span class='int'>10</span><span class='rparen'>)</span>      <span class='comment'>#=&gt; 10
+</span><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_incr'>incr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>missing1</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:initial</span> <span class='op'>=&gt;</span> <span class='int'>10</span><span class='rparen'>)</span>      <span class='comment'>#=&gt; 11
+</span><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_incr'>incr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>missing2</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:create</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>     <span class='comment'>#=&gt; 0
+</span><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_incr'>incr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>missing2</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:create</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>     <span class='comment'>#=&gt; 1
+</span></code></pre>
+
+<p>Note that it isn't the same as increment/decrement in ruby, which is
+performed on client side with following <code>set</code> operation:</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_c'>c</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='int'>10</span>
+<span class='id identifier rubyid_c'>c</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>-=</span> <span class='int'>20</span>                  <span class='comment'>#=&gt; -10
+</span></code></pre>
+
+<h3>Delete</h3>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:cas</span> <span class='op'>=&gt;</span> <span class='int'>8835713818674332672</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='int'>8835713818674332672</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ret'>ret</span><span class='op'>|</span>
+    <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_success?'>success?</span>
+    <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+</code></pre>
+
+<h3>Flush</h3>
+
+<p>Flush the items in the cluster.</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_flush'>flush</span>
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_flush'>flush</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ret'>ret</span><span class='op'>|</span>
+    <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_success?'>success?</span>
+    <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_node'>node</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+</code></pre>
+
+<h3>Stats</h3>
+
+<p>Return statistics from each node in the cluster</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_stats'>stats</span>
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_stats'>stats</span><span class='lparen'>(</span><span class='symbol'>:memory</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_stats'>stats</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ret'>ret</span><span class='op'>|</span>
+    <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_success?'>success?</span>
+    <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_node'>node</span>
+    <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span>
+    <span class='id identifier rubyid_ret'>ret</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+</code></pre>
+
+<p>The result is represented as a hash with the server node address as
+the key and stats as key-value pairs.</p>
+
+<pre class="code ruby"><code><span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>172.16.16.76:12008</span><span class='tstring_end'>&quot;</span></span><span class='op'>=&gt;</span>
+    <span class='lbrace'>{</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>threads</span><span class='tstring_end'>&quot;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>4</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>connection_structures</span><span class='tstring_end'>&quot;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>22</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ep_max_txn_size</span><span class='tstring_end'>&quot;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>10000</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='comment'># ...
+</span>    <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>172.16.16.76:12000</span><span class='tstring_end'>&quot;</span></span><span class='op'>=&gt;</span>
+    <span class='lbrace'>{</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>threads</span><span class='tstring_end'>&quot;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>4</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>connection_structures</span><span class='tstring_end'>&quot;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>447</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ep_max_txn_size</span><span class='tstring_end'>&quot;</span></span><span class='op'>=&gt;</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>10000</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='comment'># ...
+</span>    <span class='rbrace'>}</span><span class='comma'>,</span>
+  <span class='comment'># ...
+</span><span class='rbrace'>}</span>
+</code></pre>
+
+<h3>Timers</h3>
+
+<p>It is possible to create timers to implement general purpose timeouts.
+Note that timers are using microseconds for time intervals. For example,
+following examples increment the keys value five times with 0.5 second
+interval:</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_set'>set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='int'>100</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_n'>n</span> <span class='op'>=</span> <span class='int'>1</span>
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_run'>run</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_create_periodic_timer'>create_periodic_timer</span><span class='lparen'>(</span><span class='int'>500000</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_tm'>tm</span><span class='op'>|</span>
+    <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_incr'>incr</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_n'>n</span> <span class='op'>==</span> <span class='int'>5</span>
+        <span class='id identifier rubyid_tm'>tm</span><span class='period'>.</span><span class='id identifier rubyid_cancel'>cancel</span>
+      <span class='kw'>else</span>
+        <span class='id identifier rubyid_n'>n</span> <span class='op'>+=</span> <span class='int'>1</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+</code></pre>
+
+<h3>Views (Map/Reduce queries)</h3>
+
+<p>If you store structured data, they will be treated as documents and you
+can handle them in map/reduce function from Couchbase Views. For example,
+store a couple of posts using memcached API:</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_c'>c</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>biking</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:title</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Biking</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+               <span class='symbol'>:body</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>My biggest hobby is mountainbiking. The other day...</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+               <span class='symbol'>:date</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>2009/01/30 18:04:11</span><span class='tstring_end'>'</span></span><span class='rbrace'>}</span>
+<span class='id identifier rubyid_c'>c</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>bought-a-cat</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:title</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Bought a Cat</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+                     <span class='symbol'>:body</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>I went to the the pet store earlier and brought home a little kitty...</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+                     <span class='symbol'>:date</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>2009/01/30 20:04:11</span><span class='tstring_end'>'</span></span><span class='rbrace'>}</span>
+<span class='id identifier rubyid_c'>c</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>hello-world</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:title</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Hello World</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+                    <span class='symbol'>:body</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Well hello and welcome to my new blog...</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+                    <span class='symbol'>:date</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>2009/01/15 15:52:20</span><span class='tstring_end'>'</span></span><span class='rbrace'>}</span>
+<span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_all_docs'>all_docs</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span>    <span class='comment'>#=&gt; 3
+</span></code></pre>
+
+<p>Now let's create design doc with sample view and save it in file
+'blog.json':</p>
+
+<pre class="code ruby"><code>{
+  &quot;_id&quot;: &quot;_design/blog&quot;,
+  &quot;language&quot;: &quot;javascript&quot;,
+  &quot;views&quot;: {
+    &quot;recent_posts&quot;: {
+      &quot;map&quot;: &quot;function(doc){if(doc.date &amp;&amp; doc.title){emit(doc.date, doc.title);}}&quot;
+    }
+  }
+}
+</code></pre>
+
+<p>This design document could be loaded into the database like this (also you can
+pass the ruby Hash or String with JSON encoded document):</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_save_design_doc'>save_design_doc</span><span class='lparen'>(</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>blog.json</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+</code></pre>
+
+<p>To execute view you need to fetch it from design document <code>_design/blog</code>:</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_blog'>blog</span> <span class='op'>=</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_design_docs'>design_docs</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>blog</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+<span class='id identifier rubyid_blog'>blog</span><span class='period'>.</span><span class='id identifier rubyid_views'>views</span>                    <span class='comment'>#=&gt; [&quot;recent_posts&quot;]
+</span><span class='id identifier rubyid_blog'>blog</span><span class='period'>.</span><span class='id identifier rubyid_recent_posts'>recent_posts</span>             <span class='comment'>#=&gt; [#&lt;Couchbase::ViewRow:9855800 @id=&quot;hello-world&quot; @key=&quot;2009/01/15 15:52:20&quot; @value=&quot;Hello World&quot; @doc=nil @meta={} @views=[]&gt;, ...]
+</span></code></pre>
+
+<p>Gem uses streaming parser to access view results so you can iterate them
+easily and if your code won't keep links to the documents GC might free
+them as soon as it decide they are unreachable, because parser doesn't
+store global JSON tree.</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_blog'>blog</span><span class='period'>.</span><span class='id identifier rubyid_recent_posts'>recent_posts</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_doc'>doc</span><span class='op'>|</span>
+  <span class='comment'># do something
+</span>  <span class='comment'># with doc object
+</span>  <span class='id identifier rubyid_doc'>doc</span><span class='period'>.</span><span class='id identifier rubyid_key'>key</span>   <span class='comment'># gives the key argument of the emit()
+</span>  <span class='id identifier rubyid_doc'>doc</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span> <span class='comment'># gives the value argument of the emit()
+</span><span class='kw'>end</span>
+</code></pre>
+
+<p>Load with documents</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_blog'>blog</span><span class='period'>.</span><span class='id identifier rubyid_recent_posts'>recent_posts</span><span class='lparen'>(</span><span class='symbol'>:include_docs</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_doc'>doc</span><span class='op'>|</span>
+  <span class='id identifier rubyid_doc'>doc</span><span class='period'>.</span><span class='id identifier rubyid_doc'>doc</span>       <span class='comment'># gives the document which emitted the item
+</span>  <span class='id identifier rubyid_doc'>doc</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>date</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>   <span class='comment'># gives the argument of the underlying document
+</span><span class='kw'>end</span>
+</code></pre>
+
+<p>You can also use Enumerator to iterate view results</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>date</span><span class='tstring_end'>'</span></span>
+<span class='id identifier rubyid_posts_by_date'>posts_by_date</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_h'>h</span><span class='comma'>,</span><span class='id identifier rubyid_k'>k</span><span class='op'>|</span> <span class='id identifier rubyid_h'>h</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rbrace'>}</span>
+<span class='id identifier rubyid_enum'>enum</span> <span class='op'>=</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_all_docs'>all_docs</span><span class='lparen'>(</span><span class='symbol'>:include_docs</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span>  <span class='comment'># request hasn't issued yet
+</span><span class='id identifier rubyid_enum'>enum</span><span class='period'>.</span><span class='id identifier rubyid_inject'>inject</span><span class='lparen'>(</span><span class='id identifier rubyid_posts_by_date'>posts_by_date</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_acc'>acc</span><span class='comma'>,</span> <span class='id identifier rubyid_doc'>doc</span><span class='op'>|</span>
+  <span class='id identifier rubyid_acc'>acc</span><span class='lbracket'>[</span><span class='id identifier rubyid_date'>date</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Date</span><span class='period'>.</span><span class='id identifier rubyid_strptime'>strptime</span><span class='lparen'>(</span><span class='id identifier rubyid_doc'>doc</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>date</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>%Y/%m/%d</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_acc'>acc</span>
+<span class='kw'>end</span>
+</code></pre>
+
+<p>The Couchbase server could generate errors during view execution with
+<code>200 OK</code> and partial results. By default the library raises exception as
+soon as errors detected in the result stream, but you can define the
+callback <code>on_error</code> to intercept these errors and do something more
+useful.</p>
+
+<pre class="code ruby"><code><span class='id identifier rubyid_view'>view</span> <span class='op'>=</span> <span class='id identifier rubyid_blog'>blog</span><span class='period'>.</span><span class='id identifier rubyid_recent_posts'>recent_posts</span><span class='lparen'>(</span><span class='symbol'>:include_docs</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_logger'>logger</span> <span class='op'>=</span> <span class='const'>Logger</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>STDOUT</span><span class='rparen'>)</span>
+
+<span class='id identifier rubyid_view'>view</span><span class='period'>.</span><span class='id identifier rubyid_on_error'>on_error</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_reason'>reason</span><span class='op'>|</span>
+  <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_view'>view</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='rbrace'>}</span><span class='tstring_content'> received the error '</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_reason'>reason</span><span class='rbrace'>}</span><span class='tstring_content'>' from </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_from'>from</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span>
+
+<span class='id identifier rubyid_posts'>posts</span> <span class='op'>=</span> <span class='id identifier rubyid_view'>view</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_doc'>doc</span><span class='op'>|</span>
+  <span class='comment'># do something
+</span>  <span class='comment'># with doc object
+</span><span class='kw'>end</span>
+</code></pre>
+
+<p>Note that errors object in view results usually goes <em>after</em> the rows,
+so you will likely receive a number of view results successfully before
+the error is detected.</p>
+</div></div>
+
+    <div id="footer">
+  Generated on Tue Sep 18 17:48:21 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.2.1 (ruby-1.9.2).
+</div>
+
+  </body>
+</html>

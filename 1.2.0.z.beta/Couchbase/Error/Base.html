@@ -1,0 +1,725 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Exception: Couchbase::Error::Base
+  
+    &mdash; Documentation by YARD 0.8.2.1
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (B)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Couchbase.html" title="Couchbase (module)">Couchbase</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Error.html" title="Couchbase::Error (module)">Error</a></span></span>
+     &raquo; 
+    <span class="title">Base</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Exception: Couchbase::Error::Base
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">StandardError</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">StandardError</li>
+          
+            <li class="next">Couchbase::Error::Base</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">ext/couchbase_ext/couchbase_ext.c<span class="defines">,<br />
+  ext/couchbase_ext/couchbase_ext.c</span>
+</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+The base error class
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>
+1.0.0
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="Auth.html" title="Couchbase::Error::Auth (class)">Auth</a></span>, <span class='object_link'><a href="BucketNotFound.html" title="Couchbase::Error::BucketNotFound (class)">BucketNotFound</a></span>, <span class='object_link'><a href="Busy.html" title="Couchbase::Error::Busy (class)">Busy</a></span>, <span class='object_link'><a href="ClientNoMemory.html" title="Couchbase::Error::ClientNoMemory (class)">ClientNoMemory</a></span>, <span class='object_link'><a href="ClientTemporaryFail.html" title="Couchbase::Error::ClientTemporaryFail (class)">ClientTemporaryFail</a></span>, <span class='object_link'><a href="Connect.html" title="Couchbase::Error::Connect (class)">Connect</a></span>, <span class='object_link'><a href="DeltaBadval.html" title="Couchbase::Error::DeltaBadval (class)">DeltaBadval</a></span>, <span class='object_link'><a href="Internal.html" title="Couchbase::Error::Internal (class)">Internal</a></span>, <span class='object_link'><a href="Invalid.html" title="Couchbase::Error::Invalid (class)">Invalid</a></span>, <span class='object_link'><a href="KeyExists.html" title="Couchbase::Error::KeyExists (class)">KeyExists</a></span>, <span class='object_link'><a href="Libcouchbase.html" title="Couchbase::Error::Libcouchbase (class)">Libcouchbase</a></span>, <span class='object_link'><a href="Libevent.html" title="Couchbase::Error::Libevent (class)">Libevent</a></span>, <span class='object_link'><a href="Network.html" title="Couchbase::Error::Network (class)">Network</a></span>, <span class='object_link'><a href="NoMemory.html" title="Couchbase::Error::NoMemory (class)">NoMemory</a></span>, <span class='object_link'><a href="NotFound.html" title="Couchbase::Error::NotFound (class)">NotFound</a></span>, <span class='object_link'><a href="NotMyVbucket.html" title="Couchbase::Error::NotMyVbucket (class)">NotMyVbucket</a></span>, <span class='object_link'><a href="NotStored.html" title="Couchbase::Error::NotStored (class)">NotStored</a></span>, <span class='object_link'><a href="NotSupported.html" title="Couchbase::Error::NotSupported (class)">NotSupported</a></span>, <span class='object_link'><a href="Protocol.html" title="Couchbase::Error::Protocol (class)">Protocol</a></span>, <span class='object_link'><a href="Range.html" title="Couchbase::Error::Range (class)">Range</a></span>, <span class='object_link'><a href="TemporaryFail.html" title="Couchbase::Error::TemporaryFail (class)">TemporaryFail</a></span>, <span class='object_link'><a href="Timeout.html" title="Couchbase::Error::Timeout (class)">Timeout</a></span>, <span class='object_link'><a href="TooBig.html" title="Couchbase::Error::TooBig (class)">TooBig</a></span>, <span class='object_link'><a href="UnknownCommand.html" title="Couchbase::Error::UnknownCommand (class)">UnknownCommand</a></span>, <span class='object_link'><a href="UnknownHost.html" title="Couchbase::Error::UnknownHost (class)">UnknownHost</a></span>, <span class='object_link'><a href="ValueFormat.html" title="Couchbase::Error::ValueFormat (class)">ValueFormat</a></span>, <span class='object_link'><a href="View.html" title="Couchbase::Error::View (class)">View</a></span></p>
+</div>
+
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cas-instance_method" title="#cas (instance method)">- (Fixnum) <strong>cas</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#error-instance_method" title="#error (instance method)">- (Fixnum) <strong>error</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+The underlying libcouchbase library could return one of the following error
+codes.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#key-instance_method" title="#key (instance method)">- (String) <strong>key</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#operation-instance_method" title="#operation (instance method)">- (Symbol) <strong>operation</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#status-instance_method" title="#status (instance method)">- (Fixnum) <strong>status</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+
+  
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="cas-instance_method">
+  
+    - (<tt>Fixnum</tt>) <strong>cas</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+The version of the key (<tt>nil</tt> unless accessible)
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Fixnum</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the version of the key (<tt>nil</tt> unless accessible)
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>
+1.0.0
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="error-instance_method">
+  
+    - (<tt>Fixnum</tt>) <strong>error</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+The underlying libcouchbase library could return one of the following error
+codes. The ruby client will wrap these errors into appropriate exception
+class, derived from <span class='object_link'><a href="" title="Couchbase::Error::Base (class)">Couchbase::Error::Base</a></span>.
+</p>
+<table>
+<tr><td valign="top">0x00 </td><td><p>
+LCB_SUCCESS (Success)
+</p>
+</td></tr>
+<tr><td valign="top">0x01 </td><td><p>
+LCB_AUTH_CONTINUE (Continue authentication)
+</p>
+</td></tr>
+<tr><td valign="top">0x02 </td><td><p>
+LCB_AUTH_ERROR (Authentication error)
+</p>
+</td></tr>
+<tr><td valign="top">0x03 </td><td><p>
+LCB_DELTA_BADVAL (Not a number)
+</p>
+</td></tr>
+<tr><td valign="top">0x04 </td><td><p>
+LCB_E2BIG (Object too big)
+</p>
+</td></tr>
+<tr><td valign="top">0x05 </td><td><p>
+LCB_EBUSY (Too busy. Try again later)
+</p>
+</td></tr>
+<tr><td valign="top">0x06 </td><td><p>
+LCB_EINTERNAL (Internal error)
+</p>
+</td></tr>
+<tr><td valign="top">0x07 </td><td><p>
+LCB_EINVAL (Invalid arguments)
+</p>
+</td></tr>
+<tr><td valign="top">0x08 </td><td><p>
+LCB_ENOMEM (Out of memory)
+</p>
+</td></tr>
+<tr><td valign="top">0x09 </td><td><p>
+LCB_ERANGE (Invalid range)
+</p>
+</td></tr>
+<tr><td valign="top">0x0a </td><td><p>
+LCB_ERROR (Generic error)
+</p>
+</td></tr>
+<tr><td valign="top">0x0b </td><td><p>
+LCB_ETMPFAIL (Temporary failure. Try again later)
+</p>
+</td></tr>
+<tr><td valign="top">0x0c </td><td><p>
+LCB_KEY_EEXISTS (Key exists (with a different CAS value))
+</p>
+</td></tr>
+<tr><td valign="top">0x0d </td><td><p>
+LCB_KEY_ENOENT (No such key)
+</p>
+</td></tr>
+<tr><td valign="top">0x0e </td><td><p>
+LCB_LIBEVENT_ERROR (Problem using libevent)
+</p>
+</td></tr>
+<tr><td valign="top">0x0f </td><td><p>
+LCB_NETWORK_ERROR (Network error)
+</p>
+</td></tr>
+<tr><td valign="top">0x10 </td><td><p>
+LCB_NOT_MY_VBUCKET (The vbucket is not located on this server)
+</p>
+</td></tr>
+<tr><td valign="top">0x11 </td><td><p>
+LCB_NOT_STORED (Not stored)
+</p>
+</td></tr>
+<tr><td valign="top">0x12 </td><td><p>
+LCB_NOT_SUPPORTED (Not supported)
+</p>
+</td></tr>
+<tr><td valign="top">0x13 </td><td><p>
+LCB_UNKNOWN_COMMAND (Unknown command)
+</p>
+</td></tr>
+<tr><td valign="top">0x14 </td><td><p>
+LCB_UNKNOWN_HOST (Unknown host)
+</p>
+</td></tr>
+<tr><td valign="top">0x15 </td><td><p>
+LCB_PROTOCOL_ERROR (Protocol error)
+</p>
+</td></tr>
+<tr><td valign="top">0x16 </td><td><p>
+LCB_ETIMEDOUT (Operation timed out)
+</p>
+</td></tr>
+<tr><td valign="top">0x17 </td><td><p>
+LCB_CONNECT_ERROR (Connection failure)
+</p>
+</td></tr>
+<tr><td valign="top">0x18 </td><td><p>
+LCB_BUCKET_ENOENT (No such bucket)
+</p>
+</td></tr>
+<tr><td valign="top">0x18 </td><td><p>
+LCB_CLIENT_ENOMEM (Out of memory on the client)
+</p>
+</td></tr>
+</table>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Fixnum</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the error code from libcouchbase
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>
+1.0.0
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="key-instance_method">
+  
+    - (<tt>String</tt>) <strong>key</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+The key which generated error
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the key which generated error
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>
+1.0.0
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="operation-instance_method">
+  
+    - (<tt>Symbol</tt>) <strong>operation</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+The operation (<tt>nil</tt> unless accessible)
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the operation (<tt>nil</tt> unless accessible)
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>
+1.0.0
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="status-instance_method">
+  
+    - (<tt>Fixnum</tt>) <strong>status</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+The HTTP status code
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Fixnum</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The HTTP status code
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>
+1.2.0.beta
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+  </div>
+
+
+</div>
+
+    <div id="footer">
+  Generated on Tue Sep 18 17:48:24 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.2.1 (ruby-1.9.2).
+</div>
+
+  </body>
+</html>

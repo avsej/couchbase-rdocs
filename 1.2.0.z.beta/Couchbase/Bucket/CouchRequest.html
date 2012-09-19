@@ -1,0 +1,1166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Couchbase::Bucket::CouchRequest
+  
+    &mdash; Documentation by YARD 0.8.2.1
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Couchbase.html" title="Couchbase (module)">Couchbase</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Bucket.html" title="Couchbase::Bucket (class)">Bucket</a></span></span>
+     &raquo; 
+    <span class="title">CouchRequest</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Couchbase::Bucket::CouchRequest
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Couchbase::Bucket::CouchRequest</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">ext/couchbase_ext/couchbase_ext.c</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#chunked-instance_method" title="#chunked (instance method)">- (Object) <strong>chunked</strong> </a>
+    
+
+    
+      (also: #chunked?)
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+rb_define_attr(cCouchRequest, &#8220;chunked&#8221;, 1, 0);.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#extended-instance_method" title="#extended (instance method)">- (Object) <strong>extended</strong> </a>
+    
+
+    
+      (also: #extended?)
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+rb_define_attr(cCouchRequest, &#8220;extended&#8221;, 1, 0);.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#path-instance_method" title="#path (instance method)">- (Object) <strong>path</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+rb_define_attr(cCouchRequest, &#8220;path&#8221;, 1, 0);.
+</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#continue-instance_method" title="#continue (instance method)">- (Object) <strong>continue</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Bucket::CouchRequest) <strong>initialize</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Initialize new CouchRequest.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#inspect-instance_method" title="#inspect (instance method)">- (String) <strong>inspect</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns a string containing a human-readable representation of the
+CouchRequest.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#on_body-instance_method" title="#on_body (instance method)">- (Object) <strong>on_body</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Set <tt>on_body</tt> callback.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pause-instance_method" title="#pause (instance method)">- (Object) <strong>pause</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#perform-instance_method" title="#perform (instance method)">- (Object) <strong>perform</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Execute <span class='object_link'><a href="" title="Couchbase::Bucket::CouchRequest (class)">CouchRequest</a></span>.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Couchbase::Bucket::CouchRequest (class)">Bucket::CouchRequest</a></span></tt>) <strong>initialize</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Initialize new CouchRequest
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>
+1.2.0
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/couchbase_ext/http.c', line 167</span>
+
+VALUE
+cb_http_request_init(int argc, VALUE *argv, VALUE self)
+{
+    struct http_request_st *request = DATA_PTR(self);
+    VALUE bucket, path, opts, on_body, pp, arg;
+    rb_scan_args(argc, argv, &quot;22&quot;, &amp;bucket, &amp;pp, &amp;opts, &amp;on_body);
+
+    if (NIL_P(on_body) &amp;&amp; rb_block_given_p()) {
+        on_body = rb_block_proc();
+    }
+    if (CLASS_OF(bucket) != cBucket) {
+        rb_raise(rb_eTypeError, &quot;wrong argument type (expected Couchbase::Bucket)&quot;);
+    }
+    memset(&amp;request-&gt;cmd, 0, sizeof(lcb_http_cmd_t));
+    request-&gt;type = LCB_HTTP_TYPE_VIEW;
+    request-&gt;on_body_callback = on_body;
+    request-&gt;bucket = DATA_PTR(bucket);
+    request-&gt;bucket_obj = bucket;
+    request-&gt;extended = Qfalse;
+    path = StringValue(pp);	/* convert path to string */
+    request-&gt;cmd.v.v0.path = strdup(RSTRING_PTR(path));
+    request-&gt;cmd.v.v0.npath = RSTRING_LEN(path);
+    request-&gt;cmd.v.v0.method = LCB_HTTP_METHOD_GET;
+    request-&gt;cmd.v.v0.content_type = strdup(&quot;application/json&quot;);
+
+    if (opts != Qnil) {
+        Check_Type(opts, T_HASH);
+        request-&gt;extended = RTEST(rb_hash_aref(opts, sym_extended));
+        request-&gt;cmd.v.v0.chunked = RTEST(rb_hash_aref(opts, sym_chunked));
+        if ((arg = rb_hash_aref(opts, sym_type)) != Qnil) {
+            if (arg == sym_view) {
+                request-&gt;type = LCB_HTTP_TYPE_VIEW;
+            } else if (arg == sym_management) {
+                request-&gt;type = LCB_HTTP_TYPE_MANAGEMENT;
+            } else {
+                rb_raise(rb_eArgError, &quot;unsupported request type&quot;);
+            }
+        }
+        if ((arg = rb_hash_aref(opts, sym_method)) != Qnil) {
+            if (arg == sym_get) {
+                request-&gt;cmd.v.v0.method = LCB_HTTP_METHOD_GET;
+            } else if (arg == sym_post) {
+                request-&gt;cmd.v.v0.method = LCB_HTTP_METHOD_POST;
+            } else if (arg == sym_put) {
+                request-&gt;cmd.v.v0.method = LCB_HTTP_METHOD_PUT;
+            } else if (arg == sym_delete) {
+                request-&gt;cmd.v.v0.method = LCB_HTTP_METHOD_DELETE;
+            } else {
+                rb_raise(rb_eArgError, &quot;unsupported HTTP method&quot;);
+            }
+        }
+        if ((arg = rb_hash_aref(opts, sym_body)) != Qnil) {
+            Check_Type(arg, T_STRING);
+            request-&gt;cmd.v.v0.body = strdup(RSTRING_PTR(arg));
+            request-&gt;cmd.v.v0.nbody = RSTRING_LEN(arg);
+        }
+        if ((arg = rb_hash_aref(opts, sym_content_type)) != Qnil) {
+            Check_Type(arg, T_STRING);
+            xfree((char *)request-&gt;cmd.v.v0.content_type);
+            request-&gt;cmd.v.v0.content_type = strdup(RSTRING_PTR(arg));
+        }
+    }
+
+    return self;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="chunked-instance_method">
+  
+    - (<tt>Object</tt>) <strong>chunked</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='chunked?-instance_method'>chunked?</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+rb_define_attr(cCouchRequest, &#8220;chunked&#8221;, 1, 0);
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+356
+357
+358
+359
+360
+361</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/couchbase_ext/http.c', line 356</span>
+
+VALUE
+cb_http_request_chunked_get(VALUE self)
+{
+    struct http_request_st *req = DATA_PTR(self);
+    return req-&gt;cmd.v.v0.chunked ? Qtrue : Qfalse;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="extended-instance_method">
+  
+    - (<tt>Object</tt>) <strong>extended</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='extended?-instance_method'>extended?</span></span>
+    </span>
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+rb_define_attr(cCouchRequest, &#8220;extended&#8221;, 1, 0);
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+370
+371
+372
+373
+374
+375</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/couchbase_ext/http.c', line 370</span>
+
+VALUE
+cb_http_request_extended_get(VALUE self)
+{
+    struct http_request_st *req = DATA_PTR(self);
+    return req-&gt;extended ? Qtrue : Qfalse;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="path-instance_method">
+  
+    - (<tt>Object</tt>) <strong>path</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+rb_define_attr(cCouchRequest, &#8220;path&#8221;, 1, 0);
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+342
+343
+344
+345
+346
+347</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/couchbase_ext/http.c', line 342</span>
+
+VALUE
+cb_http_request_path_get(VALUE self)
+{
+    struct http_request_st *req = DATA_PTR(self);
+    return STR_NEW_CSTR(req-&gt;cmd.v.v0.path);
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="continue-instance_method">
+  
+    - (<tt>Object</tt>) <strong>continue</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/couchbase_ext/http.c', line 312</span>
+
+VALUE
+cb_http_request_continue(VALUE self)
+{
+    VALUE exc, *rv;
+    struct http_request_st *req = DATA_PTR(self);
+
+    if (req-&gt;running) {
+        lcb_wait(req-&gt;bucket-&gt;handle);
+        if (req-&gt;completed) {
+            exc = req-&gt;ctx-&gt;exception;
+            rv = req-&gt;ctx-&gt;rv;
+            xfree(req-&gt;ctx);
+            if (exc != Qnil) {
+                cb_gc_unprotect(req-&gt;bucket, exc);
+                rb_exc_raise(exc);
+            }
+            return *rv;
+        }
+    } else {
+        cb_http_request_perform(self);
+    }
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="inspect-instance_method">
+  
+    - (<tt>String</tt>) <strong>inspect</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns a string containing a human-readable representation of the
+CouchRequest.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>
+1.2.0
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/couchbase_ext/http.c', line 142</span>
+
+VALUE
+cb_http_request_inspect(VALUE self)
+{
+    VALUE str;
+    struct http_request_st *req = DATA_PTR(self);
+    char buf[200];
+
+    str = rb_str_buf_new2(&quot;#&lt;&quot;);
+    rb_str_buf_cat2(str, rb_obj_classname(self));
+    snprintf(buf, 20, &quot;:%p \&quot;&quot;, (void *)self);
+    rb_str_buf_cat2(str, buf);
+    rb_str_buf_cat2(str, req-&gt;cmd.v.v0.path);
+    snprintf(buf, 100, &quot;\&quot; chunked:%s&gt;&quot;, req-&gt;cmd.v.v0.chunked ? &quot;true&quot; : &quot;false&quot;);
+    rb_str_buf_cat2(str, buf);
+
+    return str;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="on_body-instance_method">
+  
+    - (<tt>Object</tt>) <strong>on_body</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Set <tt>on_body</tt> callback
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>
+1.2.0
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/couchbase_ext/http.c', line 238</span>
+
+VALUE
+cb_http_request_on_body(VALUE self)
+{
+    struct http_request_st *request = DATA_PTR(self);
+    VALUE old = request-&gt;on_body_callback;
+    if (rb_block_given_p()) {
+        request-&gt;on_body_callback = rb_block_proc();
+    }
+    return old;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pause-instance_method">
+  
+    - (<tt>Object</tt>) <strong>pause</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+304
+305
+306
+307
+308
+309
+310</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/couchbase_ext/http.c', line 304</span>
+
+VALUE
+cb_http_request_pause(VALUE self)
+{
+    struct http_request_st *req = DATA_PTR(self);
+    req-&gt;bucket-&gt;io-&gt;stop_event_loop(req-&gt;bucket-&gt;io);
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="perform-instance_method">
+  
+    - (<tt>Object</tt>) <strong>perform</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Execute <span class='object_link'><a href="" title="Couchbase::Bucket::CouchRequest (class)">Couchbase::Bucket::CouchRequest</a></span>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Since:</p>
+<ul class="since">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>
+1.2.0
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'ext/couchbase_ext/http.c', line 254</span>
+
+VALUE
+cb_http_request_perform(VALUE self)
+{
+    struct http_request_st *req = DATA_PTR(self);
+    struct context_st *ctx;
+    VALUE rv, exc;
+    lcb_error_t err;
+    struct bucket_st *bucket;
+
+    ctx = xcalloc(1, sizeof(struct context_st));
+    if (ctx == NULL) {
+        rb_raise(eClientNoMemoryError, &quot;failed to allocate memory&quot;);
+    }
+    rv = Qnil;
+    ctx-&gt;rv = &amp;rv;
+    ctx-&gt;bucket = bucket = req-&gt;bucket;
+    ctx-&gt;proc = rb_block_given_p() ? rb_block_proc() : req-&gt;on_body_callback;
+    ctx-&gt;extended = req-&gt;extended;
+    ctx-&gt;request = req;
+    ctx-&gt;headers_val = cb_gc_protect(bucket, rb_hash_new());
+
+    err = lcb_make_http_request(bucket-&gt;handle, (const void *)ctx,
+            req-&gt;type, &amp;req-&gt;cmd, &amp;req-&gt;request);
+    exc = cb_check_error(err, &quot;failed to schedule document request&quot;,
+            STR_NEW(req-&gt;cmd.v.v0.path, req-&gt;cmd.v.v0.npath));
+    if (exc != Qnil) {
+        xfree(ctx);
+        rb_exc_raise(exc);
+    }
+    req-&gt;running = 1;
+    req-&gt;ctx = ctx;
+    if (bucket-&gt;async) {
+        return Qnil;
+    } else {
+        lcb_wait(bucket-&gt;handle);
+        if (req-&gt;completed) {
+            exc = ctx-&gt;exception;
+            xfree(ctx);
+            if (exc != Qnil) {
+                cb_gc_unprotect(bucket, exc);
+                rb_exc_raise(exc);
+            }
+            return rv;
+        } else {
+            return Qnil;
+        }
+    }
+    return Qnil;
+}</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Tue Sep 18 17:48:25 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.2.1 (ruby-1.9.2).
+</div>
+
+  </body>
+</html>
